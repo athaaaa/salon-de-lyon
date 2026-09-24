@@ -23,7 +23,6 @@ Pastikan laptop sudah terinstall:
    Buka terminal/CMD di folder web server kamu (misal: `C:\laragon\www\`), lalu jalankan:
    ```bash
    git clone [https://github.com/athaaaa/salon-de-lyon.git](https://github.com/athaaaa/salon-de-lyon.git)
-   cd salon-de-lyon
    ```
    ```bash
    cd salon-de-lyon
