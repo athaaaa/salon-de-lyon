@@ -60,3 +60,54 @@ e. **Jalankan Aplikasi**
 php artisan serve
 ```
 Buka browser dan akses link: http://127.0.0.1:8000
+
+
+---
+
+---
+
+## 🌐 Cara Instalasi & Penggunaan ngrok (Akses HP dari Jaringan Lain)
+
+Menggunakan ngrok memungkinkan aplikasi diakses dari HP tanpa harus berada di jaringan Wi-Fi yang sama dengan laptop.
+
+### 1. Download & Instalasi ngrok
+
+1. **Download ngrok**
+   Unduh installer ngrok untuk Windows di situs resminya: [https://ngrok.com/download](https://ngrok.com/download)
+2. **Ekstrak File**
+   Ekstrak file `.zip` yang diunduh. Pindahkan file `ngrok.exe` ke folder yang mudah diakses (misal: `C:\ngrok` atau langsung ke folder `C:\Windows\System32` agar bisa dipanggil di CMD dari mana saja).
+
+---
+
+### 2. Hubungkan Akun (Authtoken)
+
+1. Buat akun gratis di [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup).
+2. Setelah login, buka menu **Your Authtoken** di dashboard.
+3. Buka CMD/Terminal di laptop, lalu jalankan perintah berikut untuk menyimpan token kamu:
+   ```bash
+   ngrok config add-authtoken TOKEN_KAMU_DI_SINI
+
+---
+
+### 3. Cara Menjalankan ngrok
+
+a. **Jalankan Server Laravel**
+
+Buka terminal/CMD pertama dan jalankan:
+
+```bash
+php artisan serve
+```
+
+b. ***Jalankan ngrok***
+
+Buka jendela CMD/Terminal baru, lalu jalankan perintah ngrok mengarah ke port 8000:
+
+```bash
+ngrok http 8000
+```
+c. ***Akses dari HP***
+
+Salin URL publik HTTPS yang muncul di terminal ngrok (contoh: https://xxxx-xxxx.ngrok-free.app).
+
+Buka browser di HP kamu dan tempelkan URL tersebut.
